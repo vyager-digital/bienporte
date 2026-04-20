@@ -584,6 +584,81 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 /* ===========================
+   DIFFERENTIATION SECTION
+   =========================== */
+.diff-section {
+  background: var(--fg);
+  color: var(--primary-fg);
+}
+
+.diff-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.diff-label {
+  color: rgba(255,255,255,0.45);
+}
+
+.diff-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 500;
+  color: var(--primary-fg);
+  line-height: 1.2;
+}
+
+.diff-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .diff-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 3rem; }
+}
+
+.diff-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.diff-icon {
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.1rem;
+  color: var(--accent);
+}
+
+.diff-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.diff-item strong {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-fg);
+  line-height: 1.4;
+}
+
+.diff-item span {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+}
+
+/* ===========================
    FORM SECTION
    =========================== */
 .form-section {
