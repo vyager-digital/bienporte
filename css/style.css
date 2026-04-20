@@ -357,6 +357,11 @@ button { cursor: pointer; font-family: inherit; }
   color: var(--accent);
 }
 
+.verdict-tag--yes {
+  background: hsl(142, 40%, 93%);
+  color: hsl(142, 50%, 35%);
+}
+
 .verdict-headline {
   font-family: var(--font-serif);
   font-size: clamp(1.25rem, 2.5vw, 1.75rem);
@@ -383,6 +388,11 @@ button { cursor: pointer; font-family: inherit; }
 .verdict-icon--no {
   background: hsl(0, 75%, 95%);
   color: hsl(0, 65%, 50%);
+}
+
+.verdict-icon--yes {
+  background: hsl(142, 40%, 93%);
+  color: hsl(142, 50%, 35%);
 }
 
 .verdict-body {
@@ -424,6 +434,8 @@ button { cursor: pointer; font-family: inherit; }
   background: var(--accent);
   margin-top: 0.45rem;
 }
+
+.reason-dot--yes { background: hsl(142, 50%, 40%); }
 
 .verdict-reasons li div {
   display: flex;
