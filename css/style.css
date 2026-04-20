@@ -246,14 +246,9 @@ button { cursor: pointer; font-family: inherit; }
   margin-top: 0.75rem;
 }
 
-/* Mobile: shorten CTA button text via CSS content isn't possible —
-   handled in HTML with a shorter label at ≤480px */
-@media (max-width: 480px) {
-  .hero-btn-full { display: none; }
-  .hero-btn-short { display: inline-flex; }
-}
-@media (min-width: 481px) {
-  .hero-btn-short { display: none; }
+.hero-btn {
+  white-space: normal;
+  text-align: center;
 }
 
 /* ===========================
