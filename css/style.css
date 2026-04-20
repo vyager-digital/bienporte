@@ -199,22 +199,19 @@ button { cursor: pointer; font-family: inherit; }
    =========================== */
 .hero {
   background: var(--bg);
-}
-
-@media (min-width: 768px) {
-  .hero {
-    padding-top: 5rem;
-    padding-bottom: 3.5rem;
-  }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-inner {
-  padding: 9rem 1.5rem 3rem;
+  padding: 6rem 1.5rem 3rem; /* 6rem = header (4rem) + 2rem breathing room */
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .hero-inner { padding: 10rem 3rem 4rem; }
+  .hero-inner { padding: 7rem 3rem 4rem; } /* 7rem = header (5rem) + 2rem */
 }
 
 .hero h1 {
@@ -223,17 +220,17 @@ button { cursor: pointer; font-family: inherit; }
   font-weight: 500;
   line-height: 1.2;
   color: var(--fg);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 .hero-sub {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.125rem);
   color: var(--muted);
-  max-width: 38rem;
-  margin: 0 auto 2.5rem;
+  max-width: 36rem;
+  margin: 0 auto 2rem;
   font-weight: 300;
   line-height: 1.6;
 }
@@ -244,8 +241,14 @@ button { cursor: pointer; font-family: inherit; }
   margin-top: 0.75rem;
 }
 
-.hero-divider {
-  margin-top: 3rem;
+/* Mobile: shorten CTA button text via CSS content isn't possible —
+   handled in HTML with a shorter label at ≤480px */
+@media (max-width: 480px) {
+  .hero-btn-full { display: none; }
+  .hero-btn-short { display: inline-flex; }
+}
+@media (min-width: 481px) {
+  .hero-btn-short { display: none; }
 }
 
 /* ===========================
