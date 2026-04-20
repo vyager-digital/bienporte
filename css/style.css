@@ -285,6 +285,7 @@ button { cursor: pointer; font-family: inherit; }
   }
 
   .hero-visual {
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
