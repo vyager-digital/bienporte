@@ -249,7 +249,7 @@ button { cursor: pointer; font-family: inherit; }
   text-align: center;
 }
 
-/* Desktop: image fills section at natural 16:9 ratio, text absolute over left */
+/* Desktop: image at natural proportions, text floats over the left whitespace */
 @media (min-width: 900px) {
   .hero {
     position: relative;
@@ -259,9 +259,6 @@ button { cursor: pointer; font-family: inherit; }
     width: 100%;
     height: auto;
     display: block;
-    min-height: 520px;
-    object-fit: cover;
-    object-position: center center;
   }
 
   .hero-inner {
