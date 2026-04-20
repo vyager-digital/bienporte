@@ -260,7 +260,7 @@ button { cursor: pointer; font-family: inherit; }
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 88vh;
-    padding-top: 0;
+    padding-top: 4rem;
     overflow: visible;
   }
 
@@ -268,7 +268,7 @@ button { cursor: pointer; font-family: inherit; }
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8rem 2rem 4rem 6%;
+    padding: 4rem 2rem 4rem 6%;
     text-align: left;
   }
 
@@ -292,12 +292,9 @@ button { cursor: pointer; font-family: inherit; }
 
   .hero-bg {
     position: absolute;
-    top: 4rem;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     width: 100%;
-    height: calc(100% - 4rem);
+    height: 100%;
     object-fit: cover;
     object-position: center;
   }
