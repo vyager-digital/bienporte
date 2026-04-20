@@ -284,19 +284,18 @@ button { cursor: pointer; font-family: inherit; }
   }
 
   .hero-visual {
-    flex: 0 0 54%;
-    height: auto;
-    overflow: visible;
+    flex: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   .hero-bg {
-    width: 100%;
-    height: auto;
-    max-height: 82vh;
-    object-fit: contain;
+    height: 78vh;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: unset;
   }
 }
 
