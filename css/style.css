@@ -991,13 +991,29 @@ button { cursor: pointer; font-family: inherit; }
    =========================== */
 @media (max-width: 480px) {
   .btn-primary {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     font-size: 0.75rem;
     height: auto;
-    min-height: 3.5rem;
+    min-height: 3rem;
+    width: 100%;
   }
 
   .header-cta { display: none; }
 
   .pain-grid { gap: 2rem; }
+
+  .personal-cta,
+  .final-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Hero button variants */
+@media (max-width: 480px) {
+  .hero-btn-full { display: none; }
+  .hero-btn-short { display: inline-flex; }
+}
+@media (min-width: 481px) {
+  .hero-btn-short { display: none; }
 }
