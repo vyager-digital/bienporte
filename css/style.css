@@ -199,8 +199,6 @@ button { cursor: pointer; font-family: inherit; }
    =========================== */
 .hero {
   background: var(--bg);
-  padding-top: 4rem; /* header offset */
-  padding-bottom: 2.5rem;
 }
 
 @media (min-width: 768px) {
@@ -211,12 +209,12 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 .hero-inner {
-  padding: 5rem 1.5rem 2.5rem;
+  padding: 9rem 1.5rem 4rem;
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .hero-inner { padding: 8rem 3rem 3.5rem; }
+  .hero-inner { padding: 10rem 3rem 5rem; }
 }
 
 .hero h1 {
