@@ -286,18 +286,17 @@ button { cursor: pointer; font-family: inherit; }
 
   .hero-visual {
     height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     overflow: hidden;
   }
 
   .hero-bg {
-    position: static;
-    width: auto;
-    height: clamp(420px, 82vh, 720px);
-    max-width: 100%;
-    object-fit: contain;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
