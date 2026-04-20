@@ -198,20 +198,25 @@ button { cursor: pointer; font-family: inherit; }
    HERO
    =========================== */
 
-/* Hero — image at natural proportions, text overlaid on left */
+/* Mobile: stacked — text then cropped image */
 .hero {
   background: var(--bg);
 }
 
-/* Mobile: stacked — text on top, image below */
 .hero-inner {
-  padding: 6rem 1.5rem 2.5rem;
+  padding: 6rem 1.5rem 2rem;
   text-align: center;
+}
+
+.hero-visual {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
 }
 
 .hero-bg {
   width: 100%;
-  height: 260px;
+  height: 100%;
   object-fit: cover;
   object-position: center center;
   display: block;
@@ -249,26 +254,20 @@ button { cursor: pointer; font-family: inherit; }
   text-align: center;
 }
 
-/* Desktop: image at natural proportions, text floats over the left whitespace */
+/* Desktop: flex row — text left, image right at natural size.
+   Both share the same cream bg so there's no visible divider. */
 @media (min-width: 900px) {
   .hero {
-    position: relative;
-  }
-
-  .hero-bg {
-    width: 100%;
-    height: auto;
-    display: block;
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    padding-top: 5rem;
+    overflow: hidden;
   }
 
   .hero-inner {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 48%;
-    max-width: 680px;
-    padding: 2rem 2rem 2rem 6%;
+    flex: 0 0 46%;
+    padding: 3rem 2rem 3rem 6%;
     text-align: left;
   }
 
@@ -282,6 +281,22 @@ button { cursor: pointer; font-family: inherit; }
     margin-left: 0;
     margin-right: 0;
     text-align: left;
+  }
+
+  .hero-visual {
+    flex: 0 0 54%;
+    height: auto;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-bg {
+    width: 100%;
+    height: auto;
+    max-height: 82vh;
+    object-fit: contain;
   }
 }
 
