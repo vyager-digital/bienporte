@@ -659,6 +659,91 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 /* ===========================
+   PERSONALÍSSIMO SECTION
+   =========================== */
+.personal-section {
+  background: var(--bg);
+}
+
+.personal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .personal-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
+.personal-image {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+}
+
+.personal-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .personal-image img { height: 480px; }
+}
+
+.personal-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 500;
+  color: var(--fg);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.personal-intro {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+}
+
+.personal-body {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  margin-bottom: 0.75rem;
+}
+
+.personal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.75rem;
+}
+
+.personal-list li {
+  color: var(--fg);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.personal-closing {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.personal-cta {
+  display: inline-flex;
+}
+
+/* ===========================
    FORM SECTION
    =========================== */
 .form-section {
