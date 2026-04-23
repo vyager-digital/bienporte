@@ -1,47 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('application-form');
-  const formWrap = document.querySelector('.application-form');
-  const success = document.querySelector('.form-success');
 
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+  // Append Meta _fbc click ID to signup CTAs for cross-domain attribution
+  function getCookie(name) {
+    const match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return match ? decodeURIComponent(match[1]) : null;
+  }
 
-      const btn = form.querySelector('.form-submit');
-      btn.textContent = 'Enviando...';
-      btn.disabled = true;
+  const fbc = getCookie('_fbc') || new URLSearchParams(window.location.search).get('fbclid');
 
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' },
-        });
-
-        if (res.ok) {
-          formWrap.classList.add('hidden');
-          success.classList.add('visible');
-        } else {
-          btn.textContent = 'Quero minha vaga';
-          btn.disabled = false;
-          alert('Ocorreu um erro. Por favor, tente novamente.');
-        }
-      } catch {
-        btn.textContent = 'Quero minha vaga';
-        btn.disabled = false;
-        alert('Ocorreu um erro. Por favor, tente novamente.');
-      }
+  if (fbc) {
+    document.querySelectorAll('a[href*="analise.bienporte.com/auth"]').forEach(a => {
+      const url = new URL(a.href);
+      url.searchParams.set('_fbc', fbc);
+      a.href = url.toString();
     });
   }
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
 });
