@@ -258,8 +258,7 @@ button { cursor: pointer; font-family: inherit; }
 @media (min-width: 900px) {
   .hero {
     display: grid;
-    grid-template-columns: minmax(0, 540px) minmax(0, 580px);
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
     min-height: 88vh;
     padding-top: 4rem;
     overflow: visible;
@@ -269,7 +268,9 @@ button { cursor: pointer; font-family: inherit; }
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem 2rem 4rem 3rem;
+    padding: 4rem 3rem 4rem 0;
+    max-width: 520px;
+    margin-left: auto;
     text-align: left;
   }
 
