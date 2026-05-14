@@ -210,11 +210,14 @@ button { cursor: pointer; font-family: inherit; }
 
 .hero-visual {
   width: 100%;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5rem 2rem;
 }
 
 .hero-bg {
   width: 100%;
+  max-width: 280px;
   height: auto;
   display: block;
 }
